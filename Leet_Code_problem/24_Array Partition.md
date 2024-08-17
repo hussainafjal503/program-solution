@@ -26,6 +26,7 @@ Constraints:
     nums.length == 2 * n
     -104 <= nums[i] <= 104
 # Java
+```
 class Solution {
     public int arrayPairSum(int[] nums) {
         Arrays.sort(nums);
