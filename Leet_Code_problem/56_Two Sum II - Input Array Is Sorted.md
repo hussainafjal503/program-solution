@@ -38,7 +38,7 @@ Constraints:
     The tests are generated such that there is exactly one solution.
 
 # Java
-```
+```java
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int ans[]=new int[2];
