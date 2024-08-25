@@ -48,7 +48,7 @@ Constraints:
     nums is sorted in non-decreasing order.
 
 # Java
-```
+```java
 class Solution {
     public int removeDuplicates(int[] nums) {
         int count=1;
