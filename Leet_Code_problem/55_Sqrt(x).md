@@ -25,7 +25,7 @@ Constraints:
 
     0 <= x <= 231 - 1
 # Java
-```
+```java
 class Solution {
     public int mySqrt(int x) {
     int s=0,e=x;
