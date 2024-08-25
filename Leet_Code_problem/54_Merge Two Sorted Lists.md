@@ -31,7 +31,7 @@ Constraints:
     Both list1 and list2 are sorted in non-decreasing order.
 
 # Java
-```
+```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
