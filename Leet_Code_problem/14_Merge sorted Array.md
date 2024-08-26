@@ -24,7 +24,7 @@ Constraints:
     -109 <= nums1[i], nums2[j] <= 109
 
 # Java
-```
+```java
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) { 
         int i,j=0;
@@ -34,6 +34,36 @@ class Solution {
             
         }
             Arrays.sort(nums1);
+    }
+        
+}
+```
+Another Approach
+
+```java
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) { 
+        int result[] =new int [m+n];
+        int i=0,j=0;
+        int p=0;
+        while(i<m || j<n){
+            int val1=(i<m)?nums1[i]:Integer.MAX_VALUE;
+            int val2=(j<n)?nums2[j]:Integer.MAX_VALUE;
+            if(val1<val2){
+                result[p]=val1;
+                i++;
+            }else{
+                result[p]=val2;
+                j++;
+            }
+            p++;
+        }
+
+        for(int k=0;k<m+n;k++){
+            nums1[k]=result[k];
+        }
+    
+        
     }
         
 }
