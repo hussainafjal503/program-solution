@@ -31,7 +31,7 @@ Constraints:
     1 <= nums[i] <= n
     All the integers in nums appear only once except for precisely one integer which appears two or more times.
 # c++
-```
+```c++
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
@@ -48,3 +48,22 @@ public:
         
     }
 };
+```
+
+# Java
+```Java
+class Solution {
+    public int findDuplicate(int[] nums) {
+       int ans=-1;
+       for(int i=0;i<nums.length;i++){
+        int index=Math.abs(nums[i]);
+            if(nums[index]<0){
+                ans=index;
+                break;
+            }
+            nums[index]*=-1;
+       }
+       return ans;
+    }
+}
+```
