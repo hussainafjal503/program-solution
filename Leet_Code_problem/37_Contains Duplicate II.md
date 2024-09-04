@@ -42,3 +42,24 @@ class Solution {
     }
 }
 ```
+# Another approach
+```java
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        Map<Integer, Integer> index = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if(!index.containsKey(nums[i])){
+                index.put(nums[i],i);
+            }
+            else{
+                int pastind=index.get(nums[i]);
+                if(Math.abs(pastind-i)<=k)
+                    return true;
+                else
+                    index.put(nums[i],i);
+            }
+        }
+        return false;
+    }
+}
+```
